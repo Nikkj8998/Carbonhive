@@ -153,51 +153,62 @@ const Blender = () => (
   </g>
 );
 
-// ─── 4. Bag Filter (Horizontal Cylindrical Vessel) ────────────────
-// Long horizontal multi-section cylindrical pressure vessel, large
-// flanged conical left end, top nozzle, pedestal support legs.
+// ─── 4. Bag Filter (Vertical Pulse-Jet Baghouse) ─────────────────
+// Tall vertical cylindrical vessel on 4 legs, stepped conical hopper
+// at the bottom, side dirty-air inlet, tall filter-bag body with
+// mid-body flange, top clean-air plenum, pulse-jet headers & outlet.
 const BagFilter = () => (
   <g>
-    {/* Pedestal supports (3 under body) */}
-    <Box ox={-4}   oz={-0.5} oy={-1.8} W={0.6} D={1} H={1.8} />
-    <Box ox={-0.8} oz={-0.5} oy={-1.8} W={0.6} D={1} H={1.8} />
-    <Box ox={2.5}  oz={-0.5} oy={-1.8} W={0.6} D={1} H={1.8} />
-    {/* Pedestal base plates */}
-    <Box ox={-4.2} oz={-0.7} oy={-2} W={1} D={1.4} H={0.2} />
-    <Box ox={-1}   oz={-0.7} oy={-2} W={1} D={1.4} H={0.2} />
-    <Box ox={2.3}  oz={-0.7} oy={-2} W={1} D={1.4} H={0.2} />
+    {/* 4 support legs */}
+    <Box ox={-1.8} oz={-0.9} oy={-3.4} W={0.5} D={0.5} H={3.4} />
+    <Box ox={1.3}  oz={-0.9} oy={-3.4} W={0.5} D={0.5} H={3.4} />
+    <Box ox={-1.8} oz={0.4}  oy={-3.4} W={0.5} D={0.5} H={3.4} />
+    <Box ox={1.3}  oz={0.4}  oy={-3.4} W={0.5} D={0.5} H={3.4} />
+    {/* Leg base plates */}
+    <Box ox={-2}   oz={-1.1} oy={-3.6} W={0.9} D={0.9} H={0.2} />
+    <Box ox={1.1}  oz={-1.1} oy={-3.6} W={0.9} D={0.9} H={0.2} />
+    <Box ox={-2}   oz={0.2}  oy={-3.6} W={0.9} D={0.9} H={0.2} />
+    <Box ox={1.1}  oz={0.2}  oy={-3.6} W={0.9} D={0.9} H={0.2} />
 
-    {/* Large conical/flanged left end cap */}
-    <Box ox={-5.5} oz={-1.5} oy={-0.8} W={1.5} D={3} H={3.5} tc="#C8921A" fc="#7A5412" sc="#3D2A08" />
-    {/* Left end ring flange */}
-    <Box ox={-4.2} oz={-1.8} oy={-1} W={0.3} D={3.6} H={4} tc="#FFB830" fc="#C8921A" sc="#7A5412" />
+    {/* Conical hopper — 3-step tapered approximation */}
+    {/* Hopper bottom outlet spout */}
+    <Box ox={-0.4} oz={-0.3} oy={-3.4} W={0.8} D={0.6} H={0.6} tc="#C8921A" fc="#7A5412" sc="#3D2A08" />
+    {/* Hopper step 1 (widest) */}
+    <Box ox={-1.6} oz={-0.8} oy={-2.5} W={3.2} D={1.6} H={0.7} />
+    {/* Hopper step 2 */}
+    <Box ox={-1.3} oz={-0.65} oy={-1.8} W={2.6} D={1.3} H={0.7} />
+    {/* Hopper step 3 — narrows to body width */}
+    <Box ox={-1.1} oz={-0.55} oy={-1.1} W={2.2} D={1.1} H={0.7} />
 
-    {/* Body section 1 */}
-    <Box ox={-4}   oz={-1.2} oy={0} W={2.2} D={2.4} H={2.4} />
-    {/* Ring flange 1 */}
-    <Box ox={-1.9} oz={-1.3} oy={-0.1} W={0.25} D={2.6} H={2.6} tc="#FFB830" fc="#C8921A" sc="#7A5412" />
+    {/* Lower body section (dirty-air zone) */}
+    <Box ox={-1.5} oz={-0.75} oy={-0.4} W={3} D={1.5} H={2.2} />
 
-    {/* Body section 2 */}
-    <Box ox={-1.6} oz={-1.2} oy={0} W={2.2} D={2.4} H={2.4} />
-    {/* Ring flange 2 */}
-    <Box ox={0.5}  oz={-1.3} oy={-0.1} W={0.25} D={2.6} H={2.6} tc="#FFB830" fc="#C8921A" sc="#7A5412" />
+    {/* Side dirty-air inlet duct */}
+    <Box ox={1.5}  oz={-0.55} oy={0.3} W={1.8} D={1.1} H={0.9} tc="#C8921A" fc="#7A5412" sc="#3D2A08" />
+    {/* Inlet duct end flange */}
+    <Box ox={3.2}  oz={-0.6}  oy={0.2} W={0.2} D={1.2} H={1.1} tc="#FFB830" fc="#C8921A" sc="#7A5412" />
 
-    {/* Body section 3 */}
-    <Box ox={0.7}  oz={-1.2} oy={0} W={2.2} D={2.4} H={2.4} />
-    {/* Ring flange 3 */}
-    <Box ox={2.8}  oz={-1.3} oy={-0.1} W={0.25} D={2.6} H={2.6} tc="#FFB830" fc="#C8921A" sc="#7A5412" />
+    {/* Mid-body ring flange (separates sections) */}
+    <Box ox={-1.6} oz={-0.85} oy={1.75} W={3.2} D={1.7} H={0.25} tc="#FFB830" fc="#C8921A" sc="#7A5412" />
 
-    {/* Body section 4 / right end (tapered smaller) */}
-    <Box ox={3}    oz={-1}   oy={0.2} W={1.5} D={2} H={2} />
-    {/* Right end flange */}
-    <Box ox={4.4}  oz={-1.1} oy={0.1} W={0.25} D={2.2} H={2.2} tc="#FFB830" fc="#C8921A" sc="#7A5412" />
-    {/* Right end nozzle */}
-    <Box ox={4.6}  oz={-0.5} oy={0.6} W={0.6} D={1} H={0.8} tc="#C8921A" fc="#7A5412" sc="#3D2A08" />
+    {/* Upper body section (filter bags zone) */}
+    <Box ox={-1.5} oz={-0.75} oy={2} W={3} D={1.5} H={2.8} />
+    {/* Access door panel on front face */}
+    <Box ox={-0.4} oz={-0.8}  oy={2.5} W={0.8} D={0.1} H={1.2} tc="#7A5412" fc="#3D2A08" sc="#1A1004" />
 
-    {/* Top nozzle (center top) */}
-    <Box ox={-1.4} oz={-0.5} oy={2.4} W={1} D={1} H={1} tc="#FFB830" fc="#C8921A" sc="#7A5412" />
-    {/* Top nozzle flange */}
-    <Box ox={-1.6} oz={-0.7} oy={3.4} W={1.4} D={1.4} H={0.2} tc="#FFB830" fc="#C8921A" sc="#7A5412" />
+    {/* Top plenum chamber (clean-air side) */}
+    <Box ox={-1.7} oz={-0.85} oy={4.8} W={3.4} D={1.7} H={1.1} tc="#C8921A" fc="#7A5412" sc="#3D2A08" />
+    {/* Plenum top flange */}
+    <Box ox={-1.8} oz={-0.95} oy={5.9} W={3.6} D={1.9} H={0.2} tc="#FFB830" fc="#C8921A" sc="#7A5412" />
+
+    {/* Pulse-jet compressed-air headers (2 rows across top plenum) */}
+    <Box ox={-1.4} oz={-0.7}  oy={6.1} W={2.8} D={0.35} H={0.22} tc="#FFB830" fc="#C8921A" sc="#7A5412" />
+    <Box ox={-1.4} oz={0.05}  oy={6.1} W={2.8} D={0.35} H={0.22} tc="#FFB830" fc="#C8921A" sc="#7A5412" />
+
+    {/* Clean-air outlet duct (top center) */}
+    <Box ox={-0.5} oz={-0.4}  oy={6.32} W={1} D={0.8} H={0.8} tc="#FFB830" fc="#C8921A" sc="#7A5412" />
+    {/* Outlet flange */}
+    <Box ox={-0.7} oz={-0.6}  oy={7.12} W={1.4} D={1.2} H={0.2} tc="#FFB830" fc="#C8921A" sc="#7A5412" />
   </g>
 );
 
