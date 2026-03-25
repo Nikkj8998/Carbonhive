@@ -153,59 +153,97 @@ const Blender = () => (
   </g>
 );
 
-// ─── 4. Bag Filter (Horizontal Cylindrical Vessel) ────────────────
-// Wide left inlet plenum, prominent separator flange, three ring-
-// flanged filter-body sections on the right, top outlet nozzle,
-// four cylindrical support legs, right-end mounting frame.
+// ─── 4. Bag Filter (Horizontal Shell-and-Tube Type) ──────────────
+// LARGE left inlet plenum with circular face + internal spokes,
+// two ring flanges on left body, very prominent separator flange,
+// three right sub-sections with dense tube-sheet rings, top nozzle,
+// four tall cylindrical legs, right-end frame with diagonal brace.
 const BagFilter = () => (
   <g>
-    {/* 4 cylindrical support legs */}
-    <Box ox={-5.4} oz={-1.5} oy={-2} W={0.65} D={0.65} H={2} />
-    <Box ox={-2.8} oz={-1.5} oy={-2} W={0.65} D={0.65} H={2} />
-    <Box ox={0.6}  oz={-1.5} oy={-2} W={0.65} D={0.65} H={2} />
-    <Box ox={3}    oz={-1.5} oy={-2} W={0.65} D={0.65} H={2} />
-    {/* Leg base flanges */}
-    <Box ox={-5.6} oz={-1.7} oy={-2.2} W={1.05} D={1.05} H={0.2} />
-    <Box ox={-3}   oz={-1.7} oy={-2.2} W={1.05} D={1.05} H={0.2} />
-    <Box ox={0.4}  oz={-1.7} oy={-2.2} W={1.05} D={1.05} H={0.2} />
-    <Box ox={2.8}  oz={-1.7} oy={-2.2} W={1.05} D={1.05} H={0.2} />
+    {/* ── SUPPORT LEGS (4 tall cylindrical pipes) ── */}
+    {/* Left section — 2 taller legs (left body is taller) */}
+    <Box ox={-5.5} oz={-1.8} oy={-2.6} W={0.7} D={0.7} H={2.6} />
+    <Box ox={-2.5} oz={-1.8} oy={-2.6} W={0.7} D={0.7} H={2.6} />
+    {/* Right section — 2 shorter legs */}
+    <Box ox={0.5}  oz={-1.5} oy={-2}   W={0.65} D={0.65} H={2} />
+    <Box ox={3.1}  oz={-1.5} oy={-2}   W={0.65} D={0.65} H={2} />
+    {/* Leg base flanges (wide flat plates) */}
+    <Box ox={-5.8} oz={-2.1} oy={-2.8} W={1.3} D={1.3} H={0.2} />
+    <Box ox={-2.8} oz={-2.1} oy={-2.8} W={1.3} D={1.3} H={0.2} />
+    <Box ox={0.2}  oz={-1.8} oy={-2.2} W={1.25} D={1.25} H={0.2} />
+    <Box ox={2.8}  oz={-1.8} oy={-2.2} W={1.25} D={1.25} H={0.2} />
 
-    {/* LEFT INLET PLENUM — large diameter, wide open */}
-    {/* Left inlet end flange */}
-    <Box ox={-6.2} oz={-1.9} oy={-0.3} W={0.3} D={3.8} H={3.8} tc="#FFB830" fc="#C8921A" sc="#7A5412" />
-    {/* Plenum body */}
-    <Box ox={-5.9} oz={-1.8} oy={0} W={3.7} D={3.6} H={3.6} />
+    {/* ── LEFT SECTION — LARGE DIAMETER FILTER CHAMBER ── */}
+    {/* Left circular end face (large bolted flange) */}
+    <Box ox={-6.3} oz={-2.2} oy={-0.5} W={0.35} D={4.4} H={4.4} tc="#FFB830" fc="#C8921A" sc="#7A5412" />
+    {/* Inner face recess — simulates circular opening (dark centre) */}
+    <Box ox={-6.0} oz={-1.7} oy={0.0}  W={0.18} D={3.2} H={3.2} tc="#1A1004" fc="#060402" sc="#030201" />
+    {/* Left body segment A (from left face to first ring flange) */}
+    <Box ox={-6.0} oz={-2.1} oy={0}    W={2.1} D={4.2} H={4.2} />
+    {/* Ring flange A — first rib on left body, ~35% from left end */}
+    <Box ox={-4.0} oz={-2.2} oy={-0.2} W={0.3} D={4.4} H={4.4} tc="#FFB830" fc="#C8921A" sc="#7A5412" />
+    {/* Left body segment B (first ring to separator) */}
+    <Box ox={-3.7} oz={-2.1} oy={0}    W={1.5} D={4.2} H={4.2} />
+    {/* Ring flange B — second rib on left body */}
+    <Box ox={-2.3} oz={-2.2} oy={-0.2} W={0.3} D={4.4} H={4.4} tc="#FFB830" fc="#C8921A" sc="#7A5412" />
 
-    {/* SEPARATOR FLANGE — prominent ring between plenum & filter body */}
-    <Box ox={-2.3} oz={-1.95} oy={-0.3} W={0.35} D={3.9} H={3.9} tc="#FFB830" fc="#C8921A" sc="#7A5412" />
+    {/* ── SEPARATOR FLANGE — thickest, most prominent ring ── */}
+    <Box ox={-2.1} oz={-2.35} oy={-0.5} W={0.45} D={4.7} H={4.7} tc="#FFB830" fc="#C8921A" sc="#7A5412" />
 
-    {/* RIGHT FILTER BODY — three sections, slightly narrower diameter */}
-    {/* Section 1 */}
-    <Box ox={-1.95} oz={-1.5} oy={0.2} W={2.1} D={3} H={3} />
-    {/* Ring flange 1 */}
-    <Box ox={0.1}   oz={-1.6} oy={0.1} W={0.28} D={3.2} H={3.2} tc="#FFB830" fc="#C8921A" sc="#7A5412" />
-    {/* Section 2 */}
-    <Box ox={0.38}  oz={-1.5} oy={0.2} W={2.1} D={3} H={3} />
-    {/* Ring flange 2 */}
-    <Box ox={2.42}  oz={-1.6} oy={0.1} W={0.28} D={3.2} H={3.2} tc="#FFB830" fc="#C8921A" sc="#7A5412" />
-    {/* Section 3 */}
-    <Box ox={2.7}   oz={-1.5} oy={0.2} W={2.1} D={3} H={3} />
+    {/* ── RIGHT SECTION — NARROWER, DENSE TUBE-SHEET RINGS ── */}
+    {/* Sub-section 1 body */}
+    <Box ox={-1.65} oz={-1.55} oy={0.2} W={1.85} D={3.1} H={3.1} />
+    {/* Tube-sheet rings on sub-section 1 (4 rings, tightly spaced) */}
+    <Box ox={-1.45} oz={-1.6}  oy={0.18} W={0.15} D={3.2} H={3.2} tc="#C8921A" fc="#7A5412" sc="#3D2A08" />
+    <Box ox={-1.05} oz={-1.6}  oy={0.18} W={0.15} D={3.2} H={3.2} tc="#C8921A" fc="#7A5412" sc="#3D2A08" />
+    <Box ox={-0.65} oz={-1.6}  oy={0.18} W={0.15} D={3.2} H={3.2} tc="#C8921A" fc="#7A5412" sc="#3D2A08" />
+    <Box ox={-0.25} oz={-1.6}  oy={0.18} W={0.15} D={3.2} H={3.2} tc="#C8921A" fc="#7A5412" sc="#3D2A08" />
+    {/* Ring flange between sub-section 1 and 2 */}
+    <Box ox={0.15}  oz={-1.65} oy={0.1}  W={0.3} D={3.3} H={3.3} tc="#FFB830" fc="#C8921A" sc="#7A5412" />
+
+    {/* Sub-section 2 body */}
+    <Box ox={0.45}  oz={-1.55} oy={0.2} W={1.85} D={3.1} H={3.1} />
+    {/* Tube-sheet rings on sub-section 2 */}
+    <Box ox={0.65}  oz={-1.6}  oy={0.18} W={0.15} D={3.2} H={3.2} tc="#C8921A" fc="#7A5412" sc="#3D2A08" />
+    <Box ox={1.05}  oz={-1.6}  oy={0.18} W={0.15} D={3.2} H={3.2} tc="#C8921A" fc="#7A5412" sc="#3D2A08" />
+    <Box ox={1.45}  oz={-1.6}  oy={0.18} W={0.15} D={3.2} H={3.2} tc="#C8921A" fc="#7A5412" sc="#3D2A08" />
+    <Box ox={1.85}  oz={-1.6}  oy={0.18} W={0.15} D={3.2} H={3.2} tc="#C8921A" fc="#7A5412" sc="#3D2A08" />
+    {/* Ring flange between sub-section 2 and 3 */}
+    <Box ox={2.25}  oz={-1.65} oy={0.1}  W={0.3} D={3.3} H={3.3} tc="#FFB830" fc="#C8921A" sc="#7A5412" />
+
+    {/* Sub-section 3 body */}
+    <Box ox={2.55}  oz={-1.55} oy={0.2} W={1.85} D={3.1} H={3.1} />
+    {/* Tube-sheet rings on sub-section 3 */}
+    <Box ox={2.75}  oz={-1.6}  oy={0.18} W={0.15} D={3.2} H={3.2} tc="#C8921A" fc="#7A5412" sc="#3D2A08" />
+    <Box ox={3.15}  oz={-1.6}  oy={0.18} W={0.15} D={3.2} H={3.2} tc="#C8921A" fc="#7A5412" sc="#3D2A08" />
+    <Box ox={3.55}  oz={-1.6}  oy={0.18} W={0.15} D={3.2} H={3.2} tc="#C8921A" fc="#7A5412" sc="#3D2A08" />
+    <Box ox={3.95}  oz={-1.6}  oy={0.18} W={0.15} D={3.2} H={3.2} tc="#C8921A" fc="#7A5412" sc="#3D2A08" />
     {/* Right end flange */}
-    <Box ox={4.75}  oz={-1.6} oy={0.1} W={0.28} D={3.2} H={3.2} tc="#FFB830" fc="#C8921A" sc="#7A5412" />
+    <Box ox={4.35}  oz={-1.65} oy={0.1}  W={0.3} D={3.3} H={3.3} tc="#FFB830" fc="#C8921A" sc="#7A5412" />
+    {/* Access door panel (small rectangular hatch on right body front face) */}
+    <Box ox={2.7}   oz={-1.6}  oy={0.9}  W={1.4} D={0.1} H={1.4} tc="#7A5412" fc="#3D2A08" sc="#1A1004" />
 
-    {/* RIGHT END FRAME — rectangular mounting bracket */}
-    <Box ox={5}    oz={-1.9} oy={-1} W={0.45} D={0.45} H={5.3} tc="#C8921A" fc="#7A5412" sc="#3D2A08" />
-    <Box ox={5}    oz={1.45} oy={-1} W={0.45} D={0.45} H={5.3} tc="#C8921A" fc="#7A5412" sc="#3D2A08" />
-    {/* Cross-brace top */}
-    <Box ox={5}    oz={-1.9} oy={4.3} W={0.45} D={3.35} H={0.35} tc="#FFB830" fc="#C8921A" sc="#7A5412" />
+    {/* ── RIGHT END FRAME (rectangular bracket + diagonal brace) ── */}
+    {/* Left vertical column */}
+    <Box ox={4.65}  oz={-2.0}  oy={-0.8} W={0.45} D={0.4} H={5.0} tc="#C8921A" fc="#7A5412" sc="#3D2A08" />
+    {/* Right vertical column */}
+    <Box ox={4.65}  oz={1.45}  oy={-0.8} W={0.45} D={0.4} H={5.0} tc="#C8921A" fc="#7A5412" sc="#3D2A08" />
+    {/* Top horizontal beam */}
+    <Box ox={4.65}  oz={-2.0}  oy={4.2}  W={0.45} D={3.45} H={0.4} tc="#FFB830" fc="#C8921A" sc="#7A5412" />
+    {/* Bottom horizontal beam */}
+    <Box ox={4.65}  oz={-2.0}  oy={-0.8} W={0.45} D={3.45} H={0.4} tc="#7A5412" fc="#3D2A08" sc="#1A1004" />
+    {/* Diagonal brace (approximated as thin angled column) */}
+    <Box ox={4.65}  oz={-1.7}  oy={0.0}  W={0.45} D={0.25} H={3.8} tc="#3D2A08" fc="#1A1004" sc="#0A0800" />
 
-    {/* TOP OUTLET NOZZLE — at junction of plenum and filter body */}
-    {/* Nozzle body */}
-    <Box ox={-2.1} oz={-0.7} oy={3.6} W={1.3} D={1.4} H={1.3} tc="#FFB830" fc="#C8921A" sc="#7A5412" />
-    {/* Nozzle top flange */}
-    <Box ox={-2.3} oz={-0.9} oy={4.9} W={1.7} D={1.8} H={0.25} tc="#FFB830" fc="#C8921A" sc="#7A5412" />
-    {/* Nozzle pipe extending up */}
-    <Box ox={-1.8} oz={-0.55} oy={5.15} W={0.7} D={0.9} H={0.9} tc="#C8921A" fc="#7A5412" sc="#3D2A08" />
+    {/* ── TOP OUTLET NOZZLE (at left/right junction, top centre) ── */}
+    {/* Nozzle base wide flange */}
+    <Box ox={-2.4}  oz={-0.95} oy={4.2}  W={2.0} D={1.9} H={0.3} tc="#FFB830" fc="#C8921A" sc="#7A5412" />
+    {/* Nozzle cylinder body */}
+    <Box ox={-2.15} oz={-0.75} oy={4.5}  W={1.5} D={1.5} H={1.5} tc="#C8921A" fc="#7A5412" sc="#3D2A08" />
+    {/* Nozzle bolted top flange */}
+    <Box ox={-2.3}  oz={-0.9}  oy={6.0}  W={1.8} D={1.8} H={0.3} tc="#FFB830" fc="#C8921A" sc="#7A5412" />
+    {/* Nozzle top cap */}
+    <Box ox={-2.0}  oz={-0.65} oy={6.3}  W={1.2} D={1.3} H={0.6} tc="#C8921A" fc="#7A5412" sc="#3D2A08" />
   </g>
 );
 
