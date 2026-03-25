@@ -1,14 +1,5 @@
-import { useRef, useEffect, useState } from "react";
-import { motion, useInView } from "framer-motion";
-import { Shield, Clock, Award, Users } from "lucide-react";
+import { motion } from "framer-motion";
 import { FaMedal, FaProjectDiagram, FaIndustry, FaTools, FaCogs, FaBolt, FaHeadset } from "react-icons/fa";
-
-const stats = [
-  { icon: Clock, value: 25, suffix: "+", label: "Years Experience" },
-  { icon: Award, value: 500, suffix: "+", label: "Installations" },
-  { icon: Shield, value: 3, suffix: "", label: "ISO Certifications" },
-  { icon: Users, value: 200, suffix: "+", label: "Active Clients" },
-];
 
 const capabilities = [
   { icon: FaMedal,          text: "Over 10 Years of Combined Expertise in Grinding Technology" },
@@ -19,35 +10,6 @@ const capabilities = [
   { icon: FaBolt,           text: "Energy-Efficient Grinding System Design" },
   { icon: FaHeadset,        text: "Comprehensive Technical Support and After-Sales Service" },
 ];
-
-const Counter = ({ target, suffix }: { target: number; suffix: string }) => {
-  const [count, setCount] = useState(0);
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true });
-
-  useEffect(() => {
-    if (!inView) return;
-    let start = 0;
-    const duration = 1500;
-    const step = target / (duration / 16);
-    const timer = setInterval(() => {
-      start += step;
-      if (start >= target) {
-        setCount(target);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(start));
-      }
-    }, 16);
-    return () => clearInterval(timer);
-  }, [inView, target]);
-
-  return (
-    <span ref={ref} className="font-display text-4xl md:text-5xl font-bold text-primary text-glow-amber">
-      {count}{suffix}
-    </span>
-  );
-};
 
 const TrustSignals = () => (
   <section id="trust" className="py-24 px-6">
@@ -93,28 +55,6 @@ const TrustSignals = () => (
           ))}
         </ul>
       </motion.div>
-
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        {stats.map((stat, i) => {
-          const Icon = stat.icon;
-          return (
-            <motion.div
-              key={stat.label}
-              className="text-center p-6"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-            >
-              <div className="w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mx-auto mb-4">
-                <Icon className="w-7 h-7 text-primary" />
-              </div>
-              <Counter target={stat.value} suffix={stat.suffix} />
-              <p className="text-muted-foreground text-sm mt-2 font-medium">{stat.label}</p>
-            </motion.div>
-          );
-        })}
-      </div>
 
       <motion.div
         className="mt-8 grid md:grid-cols-2 gap-8"
