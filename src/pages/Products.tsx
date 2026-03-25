@@ -257,11 +257,6 @@ const categories: Category[] = [
         specs: ["Capacity: up to 100 TPH", "Models: COBE-150 to COBE-600", "Multiple configurations"],
       },
       {
-        name: "Chain Conveyor",
-        description: "Designed for reliable movement of heavy, abrasive, or high-temperature bulk materials where belt conveyors are not suitable.",
-        specs: ["Width: 500–2000mm", "Capacity: up to 80 TPH", "Max incline: 30°", "Models: DC-200 to DC-600"],
-      },
-      {
         name: "Screw Conveyor",
         image: "/images/products/ScrewConveyor.jpg",
         description: "Effective and controlled movement of powders, granules, and bulk solids in horizontal, vertical, and inclined orientations. Available in U-type open and O-type closed configurations.",
