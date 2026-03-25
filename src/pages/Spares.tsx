@@ -121,10 +121,7 @@ const sparesData = [
     equipment: "Ducting & Air Handling",
     image: "/images/spares/acm-Anti_Vibration_Mounting_Pads(AVMP).png",
     parts: [
-      { name: "Sight Glass", detail: "Inspection sight glasses for ducts and vessels", image: "/images/spares/acm-Anti_Vibration_Mounting_Pads(AVMP).png" },
-      { name: "Centrifugal Fans", detail: "Induced draft and forced draft centrifugal fans", image: "/images/spares/acm-Anti_Vibration_Mounting_Pads(AVMP).png" },
       { name: "Anti-Vibration Mounting Pads", detail: "AVMP for fans and ducting isolation", image: "/images/spares/acm-Anti_Vibration_Mounting_Pads(AVMP).png" },
-      { name: "Silencers", detail: "Acoustic silencers for air handling systems", image: "/images/spares/acm-Anti_Vibration_Mounting_Pads(AVMP).png" },
     ],
   },
   {
