@@ -77,11 +77,11 @@ const sparesData = [
   },
   {
     equipment: "Micron Separator Spares",
-    image: "/images/spares/acm-classifier.png",
+    image: "/images/logo.png",
     parts: [
-      { name: "Dispersion Ring", detail: "Feed dispersion ring for uniform distribution", image: "/images/spares/acm-classifier.png" },
-      { name: "Classifier Wheel", detail: "Precision classification wheel", image: "/images/spares/acm-classifier.png" },
-      { name: "Bottom Ring", detail: "Lower chamber ring assembly", image: "/images/spares/acm-liner.png" },
+      { name: "Dispersion Ring", detail: "Feed dispersion ring for uniform distribution", image: "/images/logo.png" },
+      { name: "Classifier Wheel", detail: "Precision classification wheel", image: "/images/logo.png" },
+      { name: "Bottom Ring", detail: "Lower chamber ring assembly", image: "/images/logo.png" },
     ],
   },
   {
