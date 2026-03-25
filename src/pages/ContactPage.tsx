@@ -254,7 +254,7 @@ const ContactPage = () => {
               >
                 {[
                   { icon: Mail, label: "info@carbonhive.com" },
-                  { icon: Phone, label: "+91 99999 99999" },
+                  { icon: Phone, label: "+91 95278 39020" },
                 ].map(({ icon: Icon, label }) => (
                   <div key={label} className="flex items-center gap-2 text-sm text-muted-foreground">
                     <Icon className="w-4 h-4 text-primary shrink-0" />
@@ -325,11 +325,10 @@ const ContactPage = () => {
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className={`flex items-center gap-2 p-3 rounded-lg text-sm ${
-                    submitResult.type === "success"
-                      ? "bg-green-500/10 text-green-400 border border-green-500/20"
-                      : "bg-red-500/10 text-red-400 border border-red-500/20"
-                  }`}
+                  className={`flex items-center gap-2 p-3 rounded-lg text-sm ${submitResult.type === "success"
+                    ? "bg-green-500/10 text-green-400 border border-green-500/20"
+                    : "bg-red-500/10 text-red-400 border border-red-500/20"
+                    }`}
                 >
                   {submitResult.type === "success" ? <CheckCircle className="w-4 h-4 shrink-0" /> : <AlertCircle className="w-4 h-4 shrink-0" />}
                   {submitResult.message}
@@ -348,7 +347,7 @@ const ContactPage = () => {
                   </div>
                   <div className="flex items-center gap-3 text-sm text-muted-foreground">
                     <Phone className="w-4 h-4 text-primary shrink-0" />
-                    <span>+91 99999 99999</span>
+                    <span>+91 95278 39020</span>
                   </div>
                   <div className="flex items-start gap-3 text-sm text-muted-foreground">
                     <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
@@ -362,7 +361,7 @@ const ContactPage = () => {
                 <p className="text-sm text-muted-foreground mb-4">
                   Need spare parts or urgent support? Reach us directly on WhatsApp.
                 </p>
-                <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer"
+                <a href="https://wa.me/919527839020" target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[hsl(142_60%_22%)] border border-[hsl(142_70%_45%/0.6)] shadow-[0_0_12px_hsl(142_70%_45%/0.4)] hover:bg-[hsl(142_60%_28%)] hover:shadow-[0_0_20px_hsl(142_70%_50%/0.65)] text-white font-semibold text-sm transition-all duration-300">
                   <SiWhatsapp className="w-4 h-4" />
                   WhatsApp for Spares

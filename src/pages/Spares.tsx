@@ -228,7 +228,7 @@ const Spares = () => {
                 </button>
               )}
             </div>
-            <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer"
+            <a href="https://wa.me/9195278 39020" target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[hsl(142_60%_22%)] border border-[hsl(142_70%_45%/0.6)] shadow-[0_0_12px_hsl(142_70%_45%/0.4)] hover:bg-[hsl(142_60%_28%)] hover:shadow-[0_0_20px_hsl(142_70%_50%/0.65)] text-white font-semibold text-sm transition-all duration-300 shrink-0">
               <SiWhatsapp className="w-4 h-4" />
               WhatsApp for Spares
@@ -320,7 +320,7 @@ const SpareCard = ({ part, index }: { part: SparePart; index: number }) => (
       <span className="text-[11px] text-primary font-semibold uppercase tracking-wider mb-1">{part.equipment}</span>
       <h3 className="font-display text-base font-bold text-foreground mb-1">{part.name}</h3>
       <p className="text-xs text-muted-foreground leading-relaxed flex-1">{part.detail}</p>
-      <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer"
+      <a href="https://wa.me/9195278 39020" target="_blank" rel="noopener noreferrer"
         className="mt-3 inline-flex items-center gap-1.5 text-primary text-sm font-semibold hover:underline self-start">
         <SiWhatsapp className="w-3.5 h-3.5" />
         Enquire Now

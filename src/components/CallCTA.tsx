@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { Phone } from "lucide-react";
 
-const PHONE = "+919999999999";
-const PHONE_DISPLAY = "+91 99999 99999";
+const PHONE = "+91 95278 39020";
+const PHONE_DISPLAY = "+91 95278 39020";
 
 const CallCTA = () => {
   return (

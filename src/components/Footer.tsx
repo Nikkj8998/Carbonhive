@@ -50,9 +50,9 @@ const Footer = () => {
           </h4>
           <div className="space-y-2 text-sm text-muted-foreground">
             <p>info@carbonhive.com</p>
-            <p>+91 99999 99999</p>
+            <p>+91 95278 39020</p>
             <a
-              href="https://wa.me/919999999999"
+              href="https://wa.me/919527839020"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-[hsl(142_70%_50%)] hover:text-[hsl(142_70%_60%)] transition-colors"
